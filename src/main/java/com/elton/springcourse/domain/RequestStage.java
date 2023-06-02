@@ -21,7 +21,7 @@ public class RequestStage implements Serializable {
 
     @Serial
     private static final long serialVersionUID = 5022551408433074820L;
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
@@ -42,7 +42,7 @@ public class RequestStage implements Serializable {
     private Request request;
 
     @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
-    private User user;
+    @JoinColumn(name = "owner_id", nullable = false)
+    private User owner;
 
 }
